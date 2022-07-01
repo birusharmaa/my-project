@@ -14,7 +14,7 @@ class RestoController extends Controller
         if(Session::get('user')){
             return view('admin.layout');
         }
-        return redirect('login');
+        //return redirect('login');
     }
 
     function registerUser(Request $req)

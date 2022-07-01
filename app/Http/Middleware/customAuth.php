@@ -18,8 +18,12 @@ class customAuth
     {
         $path = $request->path();
         if ($path == "login" && Session::get('user')) {
-            return redirect('/');
-        } else if (($path != "login" && !Session::get('user')) && ($path != "register" && !Session::get('user'))) {
+            return redirect('dashboard');
+        } 
+        else if ($path == "register" && Session::get('user')) {
+            return redirect('dashboard');
+        } 
+        else if (($path != "login" && !Session::get('user')) && ($path != "register" && !Session::get('user'))) {
             return redirect('/login');
         }
         return $next($request);

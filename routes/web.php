@@ -34,8 +34,8 @@ Route::get('/schedule',[SchedulesController::class, 'index']);
 Route::get('/speaker',[SpeakersController::class, 'index']);
 Route::get('/venue',[VenueController::class, 'index']);
 
-Route::view('register', 'admin.register');
-Route::view('login', 'admin.login');
+Route::view('register', 'admin.register')->middleware('customAuth');
+Route::view('login', 'admin.login')->middleware('customAuth');
 
 Route::post('registerUser', [RestoController::class, 'registerUser']);
 Route::post('loginUser', [RestoController::class, 'login']);

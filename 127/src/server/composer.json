@@ -1,0 +1,7 @@
+{
+    "require": {
+        "paypal/rest-api-sdk-php": "^1.14",
+        "checkout/checkout-sdk-php": "^1.0",
+        "phpmailer/phpmailer": "^6.5"
+    }
+}
